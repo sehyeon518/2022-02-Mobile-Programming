@@ -4,4 +4,5 @@
     <string name="textPW">PW를 입력하세요</string>
     <string name="strBtnLogIn">로그인</string>
     <string name="strBtnSignUp">회원가입</string>
+    <string name="strBtnReturnProfile">완료</string>
 </resources>

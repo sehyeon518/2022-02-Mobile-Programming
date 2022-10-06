@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#000000"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#1a472a"
+        android:text="\nHoggy Warty Hogwarts Sign Up"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/user_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:id="@+id/btnReturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
         android:background="#2a623d"
-        android:text="완료"
+        android:text="@string/strBtnReturnProfile"
+        android:textSize="20dp"
         android:textColor="#D7CCC8" />
+
 
 </LinearLayout>

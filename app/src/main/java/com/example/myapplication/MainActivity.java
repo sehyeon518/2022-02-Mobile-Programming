@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnSignIn = (Button) findViewById(R.id.btnSignUp);
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        Button btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 startActivity(intent);
