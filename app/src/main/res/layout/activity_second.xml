@@ -15,9 +15,67 @@
         android:textSize="20dp"/>
 
     <EditText
+        android:id="@+id/user_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="이름" />
+
+    <EditText
+        android:id="@+id/user_Number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="전화번호" />
+
+    <EditText
+        android:id="@+id/user_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="주소" />
+
+    <EditText
         android:id="@+id/user_ID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="ID를 입력하세요" />
+
+    <EditText
+        android:id="@+id/user_PW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="PW를 입력하세요" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="PW에는 특수키를 포함해야 합니다"
+        android:textColor="#2a623d"/>
+
+    <RadioButton
+        android:id="@+id/btnInfoAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="개인정보의 수집 및 이용 동의" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="이용자가 제공한 모든 정보는 사용자 자원 관리를 위해 활용하며, 목적 이외의 용도로는 사용되지 않습니다." />
+
     <Button
         android:id="@+id/btnReturn"
         android:layout_width="wrap_content"

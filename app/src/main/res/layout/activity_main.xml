@@ -23,8 +23,7 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="190dp"
-        android:hint="@string/textID"
-        android:textColor="#2a623d" />
+        android:hint="@string/textID" />
 
     <EditText
         android:id="@+id/text_PW"
@@ -35,12 +34,22 @@
         android:hint="@string/textPW" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/btnLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="#2a623d"
         android:text="@string/strBtnLogIn" />
+
+    <Button
+        android:id="@+id/btnNoneMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnLogIn"
+        android:layout_marginTop="10dp"
+        android:background="#2a623d"
+        android:text="@string/strBtnNoneMember"/>
 
     <Button
         android:id="@+id/btnSignUp"

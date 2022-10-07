@@ -5,4 +5,5 @@
     <string name="strBtnLogIn">로그인</string>
     <string name="strBtnSignUp">회원가입</string>
     <string name="strBtnReturnProfile">완료</string>
+    <string name="strBtnNoneMember">\t비회원으로 상품 보기\t</string>
 </resources>
