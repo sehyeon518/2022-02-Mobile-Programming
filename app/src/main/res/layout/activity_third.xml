@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="horizontal"
+    android:layout_row="5"
+    android:layout_column="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_columnSpan="1"
+        android:gravity="center_horizontal"
+        android:textColor="#1a472a"
+        android:text="\nHarry Potter Series\n"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5d5d5d"
+        android:paddingTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_row="1"
+        android:layout_column="0" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_philosophers_stone"
+                android:contentDescription="Harry Potter and the Philosophers Stone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nPhilosophers Stone"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_chamber_of_secrets"
+                android:contentDescription="Harry Potter and the Chamber of Secrets" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nChamber of Secrets"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_prisoner_of_azkaban"
+                android:contentDescription="Harry Potter and the Prisoner of Azkaban" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nPrisoner of Azkaban"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_goblet_of_fire"
+                android:contentDescription="Harry Potter and the Goblet of Fire" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nGoblet of Fire"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5d5d5d"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_row="2"
+        android:layout_column="0" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_order_of_the_phoenix"
+                android:contentDescription="Harry Potter and the Order of the Phoenix" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nOrder of the Phoenix"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_half_blood_prince"
+                android:contentDescription="Harry Potter and the Half Blood Prince" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nHalf Blood Prince"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_deathly_hallows"
+                android:contentDescription="Harry Potter and the Deathly Hallows" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nDeathly Hallows"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/harry_potter_and_the_cursed_child"
+                android:contentDescription="Harry Potter and the Cursed Child" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Harry Potter and the\nCursed Child"
+                android:textSize="10dp"
+                android:textColor="#d7ccc8"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="#2a623d"
+        android:text="상품 추가"
+        android:textColor="#d7ccc8" />
+
+    <Button
+        android:id="@+id/btnMyPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_gravity="bottom"
+        android:background="#2a623d"
+        android:text="@string/strBtnMyProfile"
+        android:textColor="#D7CCC8"
+        android:textSize="20dp" />
+
+</GridLayout>
+
+

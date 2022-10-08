@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,14 +20,14 @@
     <EditText
         android:id="@+id/user_Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_margin="30dp"
         android:text="이름" />
 
     <EditText
         android:id="@+id/user_Number"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:text="전화번호" />
@@ -32,7 +35,7 @@
     <EditText
         android:id="@+id/user_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:text="주소" />
@@ -40,7 +43,7 @@
     <EditText
         android:id="@+id/user_ID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -49,7 +52,7 @@
     <EditText
         android:id="@+id/user_PW"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:text="PW를 입력하세요" />
@@ -65,9 +68,11 @@
         android:id="@+id/btnInfoAgree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
-        android:text="개인정보의 수집 및 이용 동의" />
+        android:layout_marginTop="30dp"
+        android:text="개인정보의 수집 및 이용 동의"
+        android:textSize="15dp"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:layout_width="match_parent"
