@@ -31,5 +31,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnNoneMember = (Button) findViewById(R.id.btnNoneMember);
+        btnNoneMember.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ThridActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
