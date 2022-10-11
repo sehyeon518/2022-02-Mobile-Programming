@@ -23,7 +23,8 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="190dp"
-        android:hint="@string/textID" />
+        android:hint="@string/textID"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/text_PW"
@@ -31,7 +32,8 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/text_ID"
-        android:hint="@string/textPW" />
+        android:hint="@string/textPW"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnLogIn"
