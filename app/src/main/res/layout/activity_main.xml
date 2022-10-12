@@ -15,7 +15,7 @@
         android:gravity="center_horizontal"
         android:text="\nHoggy Warty Hogwarts Log In"
         android:textColor="#1a472a"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/text_ID"
