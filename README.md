@@ -1,8 +1,4 @@
-# Readme
-
 # Hoggy Warty Hogwarts
-
----
 
 국민대학교 소프트웨어학부 20213043 이세현
 
@@ -25,8 +21,6 @@
 
 ### 사용 색상
 
----
-
 #5d5d5d (gray)
 
 #1a472a (green)
@@ -40,8 +34,6 @@
 ## Page # 1 *Sign In*
 
 **앱 접속 페이지 (Relative Layout)**
-
----
 
 최초 실행 시 보이는 화면
 
@@ -61,8 +53,6 @@
 
 **회원가입 페이지 (Linear Layout)**
 
----
-
 첫번째 페이지에서 회원가입 버튼 클릭 시 출력되는 화면
 
 - 현재 화면 설명 뷰 Hoggy Warty Hogwarts (TextView)
@@ -76,8 +66,6 @@
 ## Page # 3 *Books (Goods)*
 
 **도서 8권을 보여주는 화면 (5 × 1 Grid Layout)**
-
----
 
 첫번째 페이지에서 로그인 또는 비회원으로 상품 보기 버튼 클릭 시 출력되는 화면
 
