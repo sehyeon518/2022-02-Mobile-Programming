@@ -206,6 +206,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_add_goods"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="3"
@@ -217,14 +218,14 @@
         android:textColor="#d7ccc8" />
 
     <Button
-        android:id="@+id/btnMyPage"
+        android:id="@+id/btn_my_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_row="4"
         android:layout_column="0"
         android:layout_gravity="bottom"
         android:background="#2a623d"
-        android:text="@string/strBtnMyProfile"
+        android:text="@string/str_btn_my_profile"
         android:textColor="#D7CCC8"
         android:textSize="20dp" />
 
