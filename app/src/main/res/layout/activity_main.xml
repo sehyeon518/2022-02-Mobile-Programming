@@ -50,6 +50,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/btn_log_in"
         android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:background="#2a623d"
         android:text="@string/str_btn_none_member"/>
 
