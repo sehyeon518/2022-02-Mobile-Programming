@@ -1,11 +1,9 @@
 package com.example.myapplication;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,9 +16,10 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 public class SecondActivity extends Activity {
-    static private String SHARE_NAME = "SHARE_PREF";
+    static String SHARE_NAME = "SHARE_PREF";
     static SharedPreferences sharePref = null;
-    static final String SETTINGS_PLAYER_JSON = "settings_item_json";
+    public static final String SETTINGS_PLAYER_JSON = "settings_item_json";
+
 
     // 뷰 객체 생성
     EditText user_name, user_number, user_address, user_ID, user_PW;
@@ -87,7 +86,7 @@ public class SecondActivity extends Activity {
                     list.add(user_number.getText().toString());
                     list.add(user_ID.getText().toString());
                     list.add(user_PW.getText().toString());
-                    setStringArrayPref(SETTINGS_PLAYER_JSON, list);
+                    setStringArrayPref(String.valueOf(user_name.getText()), list);
 //                    editor.putString("name", user_name.getText().toString());
 //                    editor.putString("address", user_address.getText().toString());
 //                    editor.putString("number", user_number.getText().toString());
@@ -96,8 +95,8 @@ public class SecondActivity extends Activity {
 //                    android.util.Log.v("SignUp", editor.toString());
 //                    editor.commit();
                     Toast.makeText(getApplicationContext(), "회원가입 완료되었습니다", Toast.LENGTH_SHORT).show();
+                    android.util.Log.d("Sign Up", list.toString());
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    android.util.Log.d("Sigu Up", getStringArrayPref(SETTINGS_PLAYER_JSON).toString());
                     startActivity(intent);
                 }
             }
@@ -115,24 +114,24 @@ public class SecondActivity extends Activity {
         else editor.putString(key, null);
         editor.apply();
     }
-    private ArrayList<String> getStringArrayPref(String key) {
-        SharedPreferences prefs = getSharedPreferences(SHARE_NAME, MODE_PRIVATE);
-        String json = prefs.getString(key, null);
-        ArrayList<String> urls = new ArrayList<String>();
-        if (json != null) {
-            try{
-                JSONArray a = new JSONArray(json);
-                for (int i = 0; i < a.length(); i++) {
-                    String url = a.optString(i);
-                    urls.add(url);
-                }
-            }
-            catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        return urls;
-    }
+//    public ArrayList<String> getStringArrayPref(String key) {
+//        SharedPreferences prefs = getSharedPreferences(SHARE_NAME, MODE_PRIVATE);
+//        String json = prefs.getString(key, null);
+//        ArrayList<String> urls = new ArrayList<String>();
+//        if (json != null) {
+//            try{
+//                JSONArray a = new JSONArray(json);
+//                for (int i = 0; i < a.length(); i++) {
+//                    String url = a.optString(i);
+//                    urls.add(url);
+//                }
+//            }
+//            catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return urls;
+//    }
 
 }
 
