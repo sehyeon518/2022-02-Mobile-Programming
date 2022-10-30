@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 log_in = false;
-                Toast.makeText(getApplicationContext(), "로그아웃하고 회원가입 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "회원가입 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 startActivity(intent);
             }
