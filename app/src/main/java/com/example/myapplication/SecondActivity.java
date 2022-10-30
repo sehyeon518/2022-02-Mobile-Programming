@@ -86,7 +86,7 @@ public class SecondActivity extends Activity {
                     list.add(user_number.getText().toString());
                     list.add(user_ID.getText().toString());
                     list.add(user_PW.getText().toString());
-                    setStringArrayPref(String.valueOf(user_name.getText()), list);
+                    setStringArrayPref(String.valueOf(user_ID.getText()), list);
 //                    editor.putString("name", user_name.getText().toString());
 //                    editor.putString("address", user_address.getText().toString());
 //                    editor.putString("number", user_number.getText().toString());

@@ -217,18 +217,32 @@
         android:text="상품 추가"
         android:textColor="#d7ccc8" />
 
-    <Button
-        android:id="@+id/btn_my_page"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
         android:layout_row="4"
-        android:layout_column="0"
-        android:layout_gravity="bottom"
-        android:background="#2a623d"
-        android:text="@string/str_btn_my_profile"
-        android:textColor="#D7CCC8"
-        android:textSize="20dp" />
+        android:layout_column="0" >
 
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:background="#2a623d"
+            android:text="로그인 화면"
+            android:textColor="#D7CCC8"/>
+        <Button
+            android:id="@+id/btn_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2a623d"
+            android:text="@string/str_btn_my_profile"
+            android:textColor="#D7CCC8"/>
+    </LinearLayout>
 </GridLayout>
 
 

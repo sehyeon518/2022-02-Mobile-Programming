@@ -37,20 +37,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // if 문: 로그인 가능할 때
-                if(text_ID.getText().toString() != null) {
-                    ArrayList<String> list = getStringArrayPref(text_ID.getText().toString());
-                    android.util.Log.d("Sign In list.get(4)", list.get(4));
-                    android.util.Log.d("Sign In text_PW", text_PW.getText().toString());
-                    if (list.get(4).equals(text_PW.getText().toString())) {
-                        android.util.Log.d("Sign In if", list.get(4));
-                        Toast.makeText(getApplicationContext(), "호그와트 서점에 오신 걸 환영합니다", Toast.LENGTH_SHORT).show();
-                        log_in = true;
-                        Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
-                        startActivity(intent);
-                    }
-                    else {
-                        Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
-                    }
+                ArrayList<String> list = getStringArrayPref(text_ID.getText().toString());
+//                android.util.Log.d("Sign In list.get(4)", list.get(4));
+//                android.util.Log.d("Sign In text_PW", text_PW.getText().toString());
+                if (list.size() != 0 && list.get(4).equals(text_PW.getText().toString())) {
+                    android.util.Log.d("Sign In if", list.get(4));
+                    Toast.makeText(getApplicationContext(), "호그와트 서점에 오신 걸 환영합니다", Toast.LENGTH_SHORT).show();
+                    log_in = true;
+                    Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호를 다시 입력해주세요", Toast.LENGTH_SHORT).show();
                 }
             }
         });
