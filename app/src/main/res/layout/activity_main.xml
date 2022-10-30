@@ -41,7 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="#2a623d"
-        android:text="@string/str_btn_log_in" />
+        android:text="@string/str_btn_log_in"
+        android:textColor="#D7CCC8" />
 
     <Button
         android:id="@+id/btn_none_member"
@@ -53,7 +54,8 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:background="#2a623d"
-        android:text="@string/str_btn_none_member"/>
+        android:text="@string/str_btn_none_member"
+        android:textColor="#D7CCC8"/>
 
     <Button
         android:id="@+id/btn_sign_up"
@@ -61,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#2a623d"
-        android:text="@string/str_btn_sign_up"  />
+        android:text="@string/str_btn_sign_up"
+        android:textColor="#D7CCC8"/>
 
 </RelativeLayout>

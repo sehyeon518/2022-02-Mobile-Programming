@@ -15,7 +15,7 @@ public class ThirdActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        // 마이페이지
+        // 회원정보
         Button btn_my_page = (Button) findViewById(R.id.btn_my_page);
         btn_my_page.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

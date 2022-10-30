@@ -14,6 +14,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SecondActivity extends Activity {
     static String SHARE_NAME = "SHARE_PREF";
@@ -68,32 +70,36 @@ public class SecondActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "전화번호를 입력해주세요", Toast.LENGTH_SHORT).show();
                     user_number.requestFocus();
                 }
+                else if (!Pattern.matches("^01(?:0|1[6-9])(?:\\d{3}|\\d{4})\\d{4}$", number)) {
+                    Toast.makeText(getApplicationContext(), "올바른 전화번호가 아닙니다", Toast.LENGTH_SHORT).show();
+                }
                 else if (ID.equals("")) {
                     Toast.makeText(getApplicationContext(), "ID를 입력해주세요", Toast.LENGTH_SHORT).show();
                     user_ID.requestFocus();
+                }
+                else if (ID.length() < 8) {
+                    Toast.makeText(getApplicationContext(), "ID는 8자 이상이어야 합니다", Toast.LENGTH_SHORT).show();
+                }
+                else if (getStringArrayPref(ID).size() != 0) {
+                    Toast.makeText(getApplicationContext(), "이미 존재하는 아이디입니다", Toast.LENGTH_SHORT).show();
                 }
                 else if (PW.equals("")) {
                     Toast.makeText(getApplicationContext(), "PW를 입력해주세요", Toast.LENGTH_SHORT).show();
                     user_PW.requestFocus();
                 }
+                else if (!check_password(PW)) {
+                    Toast.makeText(getApplicationContext(), "PW는 영문 대소문자, 특수기호, 숫자가 적어도 하나씩 포함되어야 합니다.", Toast.LENGTH_SHORT).show();
+                }
                 else {
                     // 모든 입력이 정상적일 때
-//                    SharedPreferences.Editor editor = sharePref.edit(); // Editor를 preferences에 씀
-                    // putString
                     ArrayList<String> list = new ArrayList<>();
                     list.add(user_name.getText().toString());
                     list.add(user_address.getText().toString());
                     list.add(user_number.getText().toString());
                     list.add(user_ID.getText().toString());
                     list.add(user_PW.getText().toString());
+
                     setStringArrayPref(String.valueOf(user_ID.getText()), list);
-//                    editor.putString("name", user_name.getText().toString());
-//                    editor.putString("address", user_address.getText().toString());
-//                    editor.putString("number", user_number.getText().toString());
-//                    editor.putString("ID", user_ID.getText().toString());
-//                    editor.putString("PW", user_PW.getText().toString());
-//                    android.util.Log.v("SignUp", editor.toString());
-//                    editor.commit();
                     Toast.makeText(getApplicationContext(), "회원가입 완료되었습니다", Toast.LENGTH_SHORT).show();
                     android.util.Log.d("Sign Up", list.toString());
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -114,25 +120,38 @@ public class SecondActivity extends Activity {
         else editor.putString(key, null);
         editor.apply();
     }
-//    public ArrayList<String> getStringArrayPref(String key) {
-//        SharedPreferences prefs = getSharedPreferences(SHARE_NAME, MODE_PRIVATE);
-//        String json = prefs.getString(key, null);
-//        ArrayList<String> urls = new ArrayList<String>();
-//        if (json != null) {
-//            try{
-//                JSONArray a = new JSONArray(json);
-//                for (int i = 0; i < a.length(); i++) {
-//                    String url = a.optString(i);
-//                    urls.add(url);
-//                }
-//            }
-//            catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return urls;
-//    }
+    public ArrayList<String> getStringArrayPref(String key) {
+        SharedPreferences prefs = getSharedPreferences(SHARE_NAME, MODE_PRIVATE);
+        String json = prefs.getString(key, null);
+        ArrayList<String> urls = new ArrayList<String>();
+        if (json != null) {
+            try{
+                JSONArray a = new JSONArray(json);
+                for (int i = 0; i < a.length(); i++) {
+                    String url = a.optString(i);
+                    urls.add(url);
+                }
+            }
+            catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return urls;
+    }
+    boolean check_password(String password) {
+        String val_symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])";
+        String val_alpha = "([a-z].*[A-Z])|([A-Z].*[a-z])";
 
+        Pattern pattern_symbol = Pattern.compile(val_symbol);
+        Pattern pattern_alpha = Pattern.compile(val_alpha);
+
+        Matcher matcher_symbol = pattern_symbol.matcher(password);
+        Matcher matcher_alpha = pattern_alpha.matcher(password);
+
+        if (matcher_symbol.find() && matcher_alpha.find())
+            return true;
+        else return false;
+    }
 }
 
 

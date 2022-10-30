@@ -53,13 +53,6 @@
         android:hint="ID를 입력하세요"
         android:inputType="text"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="ID 중복 확인"
-        android:textColor="#2a623d" />
-
     <EditText
         android:id="@+id/user_PW"
         android:layout_width="match_parent"
@@ -81,9 +74,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="개인정보의 수집 및 이용 동의"
         android:textSize="15dp"
+        android:textColor="#D7CCC8"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -91,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
+        android:textColor="#D7CCC8"
         android:text="이용자가 제공한 모든 정보는 사용자 자원 관리를 위해 활용하며, 목적 이외의 용도로는 사용되지 않습니다." />
 
     <Button

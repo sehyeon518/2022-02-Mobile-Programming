@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -21,7 +22,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     static public boolean log_in = false;
     EditText text_ID, text_PW;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,17 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         text_ID = (EditText) findViewById(R.id.text_ID); // 아이디
         text_PW = (EditText) findViewById(R.id.text_PW); // 비밀번호
-
-
         // 로그인 버튼을 눌렀을 때
         Button button_login = (Button) findViewById(R.id.btn_log_in);
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // if 문: 로그인 가능할 때
                 ArrayList<String> list = getStringArrayPref(text_ID.getText().toString());
-//                android.util.Log.d("Sign In list.get(4)", list.get(4));
-//                android.util.Log.d("Sign In text_PW", text_PW.getText().toString());
+                // if 문: 로그인 가능할 때
                 if (list.size() != 0 && list.get(4).equals(text_PW.getText().toString())) {
                     android.util.Log.d("Sign In if", list.get(4));
                     Toast.makeText(getApplicationContext(), "호그와트 서점에 오신 걸 환영합니다", Toast.LENGTH_SHORT).show();
