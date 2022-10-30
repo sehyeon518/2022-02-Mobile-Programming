@@ -20,11 +20,15 @@ public class ThirdActivity extends Activity {
         btn_my_page.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // 회원이 아니면
-//                if (log_in) {
+                if (log_in) {
                     Toast.makeText(getApplicationContext(), "회원 정보 페이지로 이동합니다", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                     startActivity(intent);
-//                }
+                }
+                else {
+                    Intent intent = new Intent(getApplicationContext(), AskActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -37,11 +41,17 @@ public class ThirdActivity extends Activity {
             }
         });
 
-        // 로그인 화면으로
+        // 로그아웃
         Button btn_home = (Button) findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (log_in) {
+                    log_in = false;
+                    Toast.makeText(getApplicationContext(), "로그아웃합니다", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "로그인 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

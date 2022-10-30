@@ -6,6 +6,7 @@
     <string name="str_btn_sign_up">회원가입</string>
     <string name="str_btn_return_profile">완료</string>
     <string name="str_btn_none_member">\t비회원으로 상품 보기\t</string>
+    <string name="str_btn_none_member2">\t비회원으로 상품 보기\t</string>
     <string name="str_btn_my_profile">회원정보</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="ask_fragment">회원가입 하시겠습니까?</string>

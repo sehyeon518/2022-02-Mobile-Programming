@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import static com.example.myapplication.SecondActivity.SHARE_NAME;
+import static com.example.myapplication.SecondActivity.user_ID;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     static public boolean log_in = false;
-    EditText text_ID, text_PW;
+    static EditText text_ID, text_PW;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
         text_ID = (EditText) findViewById(R.id.text_ID); // 아이디
         text_PW = (EditText) findViewById(R.id.text_PW); // 비밀번호
+
+        if (log_in) {
+            ArrayList<String> list = getStringArrayPref(user_ID.getText().toString());
+            text_ID.setText(list.get(3));
+            text_PW.setText(list.get(4));
+        }
+
         // 로그인 버튼을 눌렀을 때
         Button button_login = (Button) findViewById(R.id.btn_log_in);
         button_login.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         Button btn_sign_up = (Button) findViewById(R.id.btn_sign_up);
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                log_in = false;
+                Toast.makeText(getApplicationContext(), "로그아웃하고 회원가입 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 startActivity(intent);
             }
@@ -62,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         Button btnNoneMember = (Button) findViewById(R.id.btn_none_member);
         btnNoneMember.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                log_in = false;
+                Toast.makeText(getApplicationContext(), "로그아웃 상태로 서점으로 이동합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
                 startActivity(intent);
             }

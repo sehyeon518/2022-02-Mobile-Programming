@@ -47,7 +47,7 @@
         android:id="@+id/user_ID"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="ID를 입력하세요"
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="PW에는 특수키를 포함해야 합니다"
+        android:text="PW에는 특수키와 숫자를 포함해야 합니다"
         android:textColor="#2a623d"/>
 
     <RadioButton
@@ -93,9 +93,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="#2a623d"
         android:text="@string/str_btn_return_profile"
+        android:textSize="20dp"
+        android:textColor="#D7CCC8" />
+    <Button
+        android:id="@+id/btn_none_member2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#2a623d"
+        android:text="@string/str_btn_none_member2"
         android:textSize="20dp"
         android:textColor="#D7CCC8" />
 
