@@ -21,14 +21,10 @@
 
 ### 사용 색상
 
-#5d5d5d (gray)
-
-#1a472a (green)
-
-#aaaaaa (gray)
-
-#2a623d (green)
-
+#5d5d5d (gray)\
+#1a472a (green)\
+#aaaaaa (gray)\
+#2a623d (green)\
 #000000 (black)
 
 ## Page # 1 *Sign In*
@@ -48,6 +44,7 @@
     
     Page # 3으로 연결됨
     
+로그인 오류 발생 시 Toast를 통해 오류를 알림
 
 ![최초실행](https://user-images.githubusercontent.com/84698896/198877499-5b21d23f-b3a7-4a02-9106-9655f6f1f31d.png)
 
@@ -75,8 +72,41 @@ public ArrayList<String> getStringArrayPref(String key) 함수로 정의되어 �
 
 - 현재 화면 설명 뷰 Hoggy Warty Hogwarts (TextView)
 - 이름, 전화번호, 주소, ID, PW 입력 뷰 (EditText)
+
+    유효한 전화번호인지 판단
+
+    ```java
+    if (!Pattern.matches("^01(?:0|1[6-9])(?:\\d{3}|\\d{4})\\d{4}$", number)) {
+                        Toast.makeText(getApplicationContext(), "올바른 전화번호가 아닙니다", Toast.LENGTH_SHORT).show();
+                    }
+    ```
+
+    PW 복잡도 판단
+
+    ```java
+    if (!check_password(PW)) {
+                        Toast.makeText(getApplicationContext(), "PW는 영문 대소문자, 특수기호, 숫자가 적어도 하나씩 포함되어야 합니다.", Toast.LENGTH_SHORT).show();
+                    }
+    ...
+    boolean check_password(String password) {
+        String val_symbol = "([0-9].*[!,@,#,^,&,*,(,)])|([!,@,#,^,&,*,(,)].*[0-9])";
+        String val_alpha = "([a-z].*[A-Z])|([A-Z].*[a-z])";
+
+        Pattern pattern_symbol = Pattern.compile(val_symbol);
+        Pattern pattern_alpha = Pattern.compile(val_alpha);
+
+        Matcher matcher_symbol = pattern_symbol.matcher(password);
+        Matcher matcher_alpha = pattern_alpha.matcher(password);
+
+        if (matcher_symbol.find() && matcher_alpha.find()) return true;
+        else return false;
+    }
+    ```
+
 - 개인정보 수집 및 이용 동의 뷰 (Radio Button)
 - 완료 뷰 (Button)
+
+    입력이 완전하지 않을 때 Toast로 오류를 알림
     
     Page # 1로 연결됨
     
